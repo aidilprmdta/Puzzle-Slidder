@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.PuzzleController"
+            styleClass="root">
+
+    <!-- ===== HEADER ===== -->
+    <top>
+        <VBox alignment="CENTER" spacing="6" styleClass="header">
+            <Label text="PUZZLE SLIDER" styleClass="title"/>
+            <Label fx:id="moveLabel" text="Moves: 0" styleClass="move-label"/>
+        </VBox>
+    </top>
+
+    <!-- ===== BOARD CARD ===== -->
+    <center>
+        <StackPane alignment="CENTER">
+            <VBox styleClass="board-card">
+                <GridPane fx:id="gridPane"
+                          alignment="CENTER"
+                          hgap="8"
+                          vgap="8"/>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- ===== CONTROL BAR ===== -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="14" styleClass="control-bar">
+            <Button text="Shuffle" fx:id="shuffleBtn" styleClass="primary-btn"/>
+            <Button text="Reset" fx:id="resetBtn" styleClass="secondary-btn"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
